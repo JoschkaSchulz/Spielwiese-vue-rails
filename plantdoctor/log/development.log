@@ -1,0 +1,1639 @@
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 13:51:12 +0200
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210630112457_create_plants.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 13:51:13 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210630112457_create_plants.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 13:51:19 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210630112457_create_plants.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 13:53:11 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210630112457_create_plants.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20210630112457)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210630112457"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-30 11:53:36.163789"], ["updated_at", "2021-06-30 11:53:36.163789"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 13:53:38 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1024)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:18:55 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.8ms | Allocations: 1175)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:19:23 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 604)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:22:48 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 585)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:23:17 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 585)
+
+
+Started POST "/plants" for 127.0.0.1 at 2021-06-30 14:23:44 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"name"=>"Gurke", "size"=>"20", "watering"=>"Jeden 2. Tag", "plant"=>{"name"=>"Gurke", "size"=>"20", "watering"=>"Jeden 2. Tag"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mPlant Create (1.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "size", "watering", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gurke"], ["size", 20], ["watering", "Jeden 2. Tag"], ["created_at", "2021-06-30 12:23:44.066924"], ["updated_at", "2021-06-30 12:23:44.066924"]]
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+Completed 201 Created in 14ms (Views: 1.4ms | ActiveRecord: 3.2ms | Allocations: 4919)
+
+
+Started POST "/plants" for 127.0.0.1 at 2021-06-30 14:23:51 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"name"=>"Gurke", "size"=>"20", "watering"=>"Jeden 2. Tag", "plant"=>{"name"=>"Gurke", "size"=>"20", "watering"=>"Jeden 2. Tag"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "size", "watering", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gurke"], ["size", 20], ["watering", "Jeden 2. Tag"], ["created_at", "2021-06-30 12:23:51.518067"], ["updated_at", "2021-06-30 12:23:51.518067"]]
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 2.0ms | Allocations: 1762)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:24:08 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 845)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:27:04 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:27:16 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 813)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:27:58 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:27:59 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:28:39 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 813)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:29:46 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:33:12 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 813)
+
+
+Started POST "/plants" for 127.0.0.1 at 2021-06-30 14:33:23 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"name"=>"Chili", "size"=>"50", "watering"=>"Montags", "plant"=>{"name"=>"Chili", "size"=>"50", "watering"=>"Montags"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "size", "watering", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chili"], ["size", 50], ["watering", "Montags"], ["created_at", "2021-06-30 12:33:23.831686"], ["updated_at", "2021-06-30 12:33:23.831686"]]
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 1758)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:33:51 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 927)
+
+
+Started POST "/plants" for 127.0.0.1 at 2021-06-30 14:34:00 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"name"=>"Chili 2", "size"=>"40", "watering"=>"Dienstags", "plant"=>{"name"=>"Chili 2", "size"=>"40", "watering"=>"Dienstags"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "size", "watering", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chili 2"], ["size", 40], ["watering", "Dienstags"], ["created_at", "2021-06-30 12:34:00.728835"], ["updated_at", "2021-06-30 12:34:00.728835"]]
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 1761)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:34:11 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1042)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:36:08 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:36:13 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 1042)
+
+
+Started POST "/plants" for 127.0.0.1 at 2021-06-30 14:36:25 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"name"=>"Kaktus", "size"=>"600", "watering"=>"Nie", "plant"=>{"name"=>"Kaktus", "size"=>"600", "watering"=>"Nie"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "size", "watering", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kaktus"], ["size", 600], ["watering", "Nie"], ["created_at", "2021-06-30 12:36:25.057503"], ["updated_at", "2021-06-30 12:36:25.057503"]]
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+Completed 201 Created in 5ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 1761)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:36:48 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1156)
+
+
+Started POST "/plants" for 127.0.0.1 at 2021-06-30 14:37:00 +0200
+Processing by PlantsController#create as HTML
+  Parameters: {"name"=>"Erdbeere", "size"=>"10", "watering"=>"Immer", "plant"=>{"name"=>"Erdbeere", "size"=>"10", "watering"=>"Immer"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "size", "watering", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Erdbeere"], ["size", 10], ["watering", "Immer"], ["created_at", "2021-06-30 12:37:00.759270"], ["updated_at", "2021-06-30 12:37:00.759270"]]
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 1.7ms | Allocations: 1758)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:37:00 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.2ms | Allocations: 1271)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:37:25 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 14:37:36 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 15:15:27 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 1.4ms | Allocations: 1842)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 15:44:58 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 1.1ms | Allocations: 1840)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 15:45:52 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:00:02 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 1841)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:07:16 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 1841)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:07:36 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:10:28 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:10:37 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:10:40 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:10:41 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:12:14 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:38:34 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 1.0ms | Allocations: 1840)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:54:18 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.9ms | Allocations: 1840)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:54:52 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:54:57 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 1271)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:55:10 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:55:22 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:56:43 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:59:15 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1272)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:59:16 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-06-30 16:59:21 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 10:51:00 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.7ms | Allocations: 1842)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 10:51:05 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 10:51:15 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1270)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLeaveDamages (20210701092022)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210701092022"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/leave_damages" for 127.0.0.1 at 2021-07-01 12:36:43 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LeaveDamagesController#create as HTML
+  Parameters: {"wetBrown"=>true, "dryBrown"=>false, "yellow"=>false, "losingLeaves"=>true, "parasites"=>"", "leave_damage"=>{"wetBrown"=>true, "dryBrown"=>false, "yellow"=>false, "losingLeaves"=>true, "parasites"=>""}}
+Completed 422 Unprocessable Entity in 54ms (Views: 18.2ms | ActiveRecord: 1.1ms | Allocations: 9277)
+
+
+Started POST "/leave_damages" for 127.0.0.1 at 2021-07-01 12:37:23 +0200
+Processing by LeaveDamagesController#create as HTML
+  Parameters: {"wetBrown"=>true, "dryBrown"=>false, "yellow"=>false, "losingLeaves"=>true, "parasites"=>"", "plant_id"=>1, "leave_damage"=>{"wetBrown"=>true, "dryBrown"=>false, "yellow"=>false, "losingLeaves"=>true, "parasites"=>"", "plant_id"=>1}}
+[31mUnpermitted parameter: :plant_id[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 624)
+
+
+Started POST "/leave_damages" for 127.0.0.1 at 2021-07-01 12:39:37 +0200
+Processing by LeaveDamagesController#create as HTML
+  Parameters: {"wetBrown"=>false, "dryBrown"=>true, "yellow"=>false, "losingLeaves"=>true, "parasites"=>"", "plant"=>1, "leave_damage"=>{"wetBrown"=>false, "dryBrown"=>true, "yellow"=>false, "losingLeaves"=>true, "parasites"=>""}}
+Completed 422 Unprocessable Entity in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 598)
+
+
+Started POST "/leave_damages" for 127.0.0.1 at 2021-07-01 12:40:45 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LeaveDamagesController#create as HTML
+  Parameters: {"wetBrown"=>false, "dryBrown"=>true, "yellow"=>false, "losingLeaves"=>true, "parasites"=>"", "plant_id"=>1, "leave_damage"=>{"wetBrown"=>false, "dryBrown"=>true, "yellow"=>false, "losingLeaves"=>true, "parasites"=>"", "plant_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/leave_damages_controller.rb:20:in `create'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/leave_damages_controller.rb:20:in `create'
+  [1m[36mLeaveDamage Create (1.5ms)[0m  [1m[32mINSERT INTO "leave_damages" ("wetBrown", "dryBrown", "yellow", "losingLeaves", "parasites", "plant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["wetBrown", 0], ["dryBrown", 1], ["yellow", 0], ["losingLeaves", 1], ["parasites", ""], ["plant_id", 1], ["created_at", "2021-07-01 10:40:45.545584"], ["updated_at", "2021-07-01 10:40:45.545584"]]
+  ↳ app/controllers/leave_damages_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/leave_damages_controller.rb:20:in `create'
+Completed 201 Created in 54ms (Views: 3.0ms | ActiveRecord: 5.6ms | Allocations: 10663)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:02:08 +0200
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 11ms (Allocations: 1818)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<PlantsController:0x0000000000af00>):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:02:28 +0200
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1963)
+
+
+  
+NoMethodError (undefined method `authenticate_user!' for #<PlantsController:0x00000000007288>):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210701120336)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210701120336"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:03:47 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 835)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:03:47 +0200
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 6910)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:04:35 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 539)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:04:35 +0200
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 6575)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:05:23 +0200
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 82)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:05:23 +0200
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:05:38 +0200
+Processing by PlantsController#index as */*
+Completed 500 Internal Server Error in 15ms (Allocations: 2150)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<PlantsController:0x00000000009498>
+Did you mean?  authenticate_user!):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:05:45 +0200
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 2ms (Allocations: 401)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:05:45 +0200
+Processing by Devise::SessionsController#new as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4715)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:07:32 +0200
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 2ms (Allocations: 379)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:07:32 +0200
+Processing by Devise::SessionsController#new as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 4649)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:07:39 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 525)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:07:39 +0200
+Processing by Devise::SessionsController#new as */*
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6575)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:08:31 +0200
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 539)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:08:32 +0200
+Processing by Devise::SessionsController#new as JSON
+Completed 406 Not Acceptable in 53ms (ActiveRecord: 2.8ms | Allocations: 6527)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.0) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (6.1.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:08:42 +0200
+Processing by PlantsController#index as */*
+  Parameters: {"plant"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.3ms | Allocations: 80)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:08:42 +0200
+Processing by Devise::SessionsController#new as JSON
+  Parameters: {"session"=>{}}
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 236)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.0) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (6.1.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:12:28 +0200
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  Parameters: {"plant"=>{}}
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.6ms | Allocations: 540)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:12:28 +0200
+Processing by Devise::SessionsController#new as */*
+  Parameters: {"session"=>{}}
+Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 6104)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:12:30 +0200
+Processing by PlantsController#index as */*
+  Parameters: {"plant"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 83)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-07-01 14:12:30 +0200
+Processing by Devise::SessionsController#new as */*
+  Parameters: {"session"=>{}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 257)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20210701120336)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP INDEX "index_users_on_reset_password_token"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP INDEX "index_users_on_email"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210701120336"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ (erb):38:in `migration_template'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ (erb):38:in `migration_template'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseTokenAuthCreateUsers (20210701123336)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210701123336"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:39:14 +0200
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  Parameters: {"plant"=>{}}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 14.0ms | ActiveRecord: 2.0ms | Allocations: 5802)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:39:23 +0200
+Processing by PlantsController#index as */*
+  Parameters: {"plant"=>{}}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1308)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:41:50 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PlantsController#index as */*
+  Parameters: {"plant"=>{}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 325ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 12965)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:55:04 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "null"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 34ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 4378)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 14:55:18 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "null"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 787)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:17:48 +0200
+Processing by PlantsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "null"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 20ms (Views: 2.3ms | ActiveRecord: 2.3ms | Allocations: 1509)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:18:22 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "null"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 769)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:18:52 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "null"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 773)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:20:38 +0200
+Processing by PlantsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "null"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 767)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:28:02 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:28:13 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:28:40 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:28:42 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:28:49 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:29:12 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:29:14 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.6ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:29:35 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:30:04 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:30:21 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:30:23 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:30:44 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:30:52 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:31:06 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.9ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:31:07 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:31:17 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:31:27 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:31:53 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:32:06 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:32:07 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:32:15 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:32:16 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:32:58 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | Allocations: 134)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:33:06 +0200
+Processing by PlantsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | Allocations: 134)
+
+
+Started POST "/v1/authentication/sign_in" for 127.0.0.1 at 2021-07-01 16:44:01 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/v1/authentication/sign_in"):
+  
+Started POST "/auth" for 127.0.0.1 at 2021-07-01 16:44:16 +0200
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"test", "password"=>"[FILTERED]", "registration"=>{"email"=>"test", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+[31mUnpermitted parameter: :registration[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "test"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 367ms (Views: 0.5ms | ActiveRecord: 2.6ms | Allocations: 13332)
+
+
+Started POST "/auth" for 127.0.0.1 at 2021-07-01 16:45:00 +0200
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "registration"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "joschka.schulz@gmx.de"], ["encrypted_password", "$2a$12$G//XKMwP21lOwHtB7/315OsqpyeTZEYNraMv843/fvwcw4UUdbY5."], ["email", "joschka.schulz@gmx.de"], ["created_at", "2021-07-01 14:45:00.887982"], ["updated_at", "2021-07-01 14:45:00.887982"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"ZufYyVy4EODMV_AS3i1dKg\":{\"token\":\"$2a$10$mi7.HPEl4JhrDX8/1dEQRuSXaKMHp96iH7BuXskxRQeEefTTCYEvS\",\"expiry\":1626360300}}"], ["updated_at", "2021-07-01 14:45:00.953134"], ["id", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"ZufYyVy4EODMV_AS3i1dKg\":{\"token\":\"$2a$10$agBBRdCS4fNAjHWTyIkwFuOvbaBRo0yCnFZZMbXkoTz.PvCgJ6QvC\",\"expiry\":1626360301,\"last_token\":\"$2a$10$mi7.HPEl4JhrDX8/1dEQRuSXaKMHp96iH7BuXskxRQeEefTTCYEvS\",\"updated_at\":\"2021-07-01T14:45:00Z\"}}"], ["updated_at", "2021-07-01 14:45:01.015616"], ["id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 356ms (Views: 0.2ms | ActiveRecord: 6.1ms | Allocations: 11564)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:45:01 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 137)
+
+
+Started POST "/auth" for 127.0.0.1 at 2021-07-01 16:46:24 +0200
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "registration"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+[31mUnpermitted parameter: :registration[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "joschka.schulz@gmx.de"], ["encrypted_password", "$2a$12$jLhrIbKfhs3omYPuXfmr4O7fHw0.rZzMIFFyajdpfCs/XIgukGcBq"], ["email", "joschka.schulz@gmx.de"], ["created_at", "2021-07-01 14:46:24.418072"], ["updated_at", "2021-07-01 14:46:24.418072"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"expiry\":1626360384}}"], ["updated_at", "2021-07-01 14:46:24.469967"], ["id", 2]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"}}"], ["updated_at", "2021-07-01 14:46:24.526189"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 309ms (Views: 0.2ms | ActiveRecord: 4.7ms | Allocations: 11156)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:46:24 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 137)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:48:00 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 137)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-07-01 16:48:10 +0200
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "session"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /Users/twitch/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"expiry\":1626360490}}"], ["updated_at", "2021-07-01 14:48:10.944904"], ["id", 2]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"}}"], ["updated_at", "2021-07-01 14:48:11.015228"], ["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 387ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 8894)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:48:11 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-07-01 16:49:34 +0200
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "session"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /Users/twitch/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"expiry\":1626360575}}"], ["updated_at", "2021-07-01 14:49:35.220746"], ["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"}}"], ["updated_at", "2021-07-01 14:49:35.291007"], ["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 381ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 8785)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:49:35 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 137)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-07-01 16:49:59 +0200
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "session"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /Users/twitch/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"expiry\":1626360600}}"], ["updated_at", "2021-07-01 14:50:00.171215"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (6.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"}}"], ["updated_at", "2021-07-01 14:50:00.257197"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 469ms (Views: 0.2ms | ActiveRecord: 9.9ms | Allocations: 8919)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:50:00 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 137)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-07-01 16:52:11 +0200
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "session"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /Users/twitch/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"expiry\":1626360732}}"], ["updated_at", "2021-07-01 14:52:12.170666"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"}}"], ["updated_at", "2021-07-01 14:52:12.256230"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 477ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 9067)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:52:12 +0200
+Processing by PlantsController#index as */*
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 137)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2021-07-01 16:55:44 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]", "session"=>{"email"=>"joschka.schulz@gmx.de", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+DEPRECATION WARNING: connection_config is deprecated and will be removed from Rails 6.2 (Use connection_db_config instead) (called from public_send at /Users/twitch/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activesupport-6.1.4/lib/active_support/core_ext/object/try.rb:15)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? AND "users"."provider" = ? LIMIT ?[0m  [["email", "joschka.schulz@gmx.de"], ["provider", "email"], ["LIMIT", 1]]
+[31mUnpermitted parameter: :session[0m
+[31mUnpermitted parameter: :session[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$7hCEG.ZJCfa5GLiokJCZ/eyTDVdrQ4NXzfnHj1Aep.zAB.fndd8T6\",\"expiry\":1626360945}}"], ["updated_at", "2021-07-01 14:55:45.523287"], ["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$4qqqCgaGsoq575thxRsMgenUVx5tBp9FtKY0HxNF.bd5Iu.Yq3kuC\",\"expiry\":1626360945,\"last_token\":\"$2a$10$7hCEG.ZJCfa5GLiokJCZ/eyTDVdrQ4NXzfnHj1Aep.zAB.fndd8T6\",\"updated_at\":\"2021-07-01T14:55:45Z\"}}"], ["updated_at", "2021-07-01 14:55:45.593630"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 523ms (Views: 0.3ms | ActiveRecord: 4.6ms | Allocations: 22469)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:55:45 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 106ms (Views: 7.4ms | ActiveRecord: 2.0ms | Allocations: 11023)
+
+
+Started POST "/leave_damages" for 127.0.0.1 at 2021-07-01 16:58:17 +0200
+Processing by LeaveDamagesController#create as */*
+  Parameters: {"wetBrown"=>true, "dryBrown"=>false, "yellow"=>false, "losingLeaves"=>false, "parasites"=>"", "plant_id"=>3, "leave_damage"=>{"wetBrown"=>true, "dryBrown"=>false, "yellow"=>false, "losingLeaves"=>false, "parasites"=>"", "plant_id"=>3}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/leave_damages_controller.rb:21:in `create'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/leave_damages_controller.rb:21:in `create'
+  [1m[36mLeaveDamage Create (1.1ms)[0m  [1m[32mINSERT INTO "leave_damages" ("wetBrown", "dryBrown", "yellow", "losingLeaves", "parasites", "plant_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["wetBrown", 1], ["dryBrown", 0], ["yellow", 0], ["losingLeaves", 0], ["parasites", ""], ["plant_id", 3], ["created_at", "2021-07-01 14:58:17.914593"], ["updated_at", "2021-07-01 14:58:17.914593"]]
+  ↳ app/controllers/leave_damages_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/leave_damages_controller.rb:21:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$m8WVkvF4h5z0eTXiBl/oAOT2S2qpWS7DDru00Jprion89KVZ3i3qy\",\"expiry\":1626361098,\"last_token\":\"$2a$10$4qqqCgaGsoq575thxRsMgenUVx5tBp9FtKY0HxNF.bd5Iu.Yq3kuC\",\"updated_at\":\"2021-07-01T14:58:17Z\"}}"], ["updated_at", "2021-07-01 14:58:18.012243"], ["id", 2]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 152ms (Views: 1.1ms | ActiveRecord: 5.7ms | Allocations: 13420)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 16:58:49 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$1JqG22Qsf7/6XpOezB4f4OY.05l3j8DoRMjAqYVvIRFNsG2iA6TLm\",\"expiry\":1626361129,\"last_token\":\"$2a$10$m8WVkvF4h5z0eTXiBl/oAOT2S2qpWS7DDru00Jprion89KVZ3i3qy\",\"updated_at\":\"2021-07-01T14:58:49Z\"}}"], ["updated_at", "2021-07-01 14:58:49.343206"], ["id", 2]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 154ms (Views: 2.9ms | ActiveRecord: 1.9ms | Allocations: 6951)
+
+
