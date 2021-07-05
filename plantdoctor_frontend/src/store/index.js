@@ -7,7 +7,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    user: null,
+    user: {
+      email: '',
+    },
     auth: {},
     plants: [],
     currentPlant: {
@@ -36,7 +38,18 @@ export default new Vuex.Store({
   },
   plugins: [createPersist({
     namespace: 'plant-states',
-    initialState: {},
+    initialState: {
+      user: {
+        email: '',
+      },
+      auth: {},
+      plants: [],
+      currentPlant: {
+        name: '',
+        size: 0,
+        watering: '',
+      }
+    },
     // ONE_WEEK
     expires: 7 * 24 * 60 * 60 * 1e3})]
 })

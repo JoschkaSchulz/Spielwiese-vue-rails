@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  plantdoctor_api:
+    build: ./plantdoctor
+    ports:
+      - "3000:3000"
+  plantdoctor_client:
+    build: ./plantdoctor_frontend
+    ports:
+      - "80:80"

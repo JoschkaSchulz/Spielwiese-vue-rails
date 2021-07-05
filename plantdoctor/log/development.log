@@ -1637,3 +1637,657 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 154ms (Views: 2.9ms | ActiveRecord: 1.9ms | Allocations: 6951)
 
 
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:28:39 +0200
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$tccZ3EW.AjviUBtqdR/VZunK1kJUZK2BmjiQIgK8GPoMZLjvG8CqG\",\"expiry\":1626362920,\"last_token\":\"$2a$10$1JqG22Qsf7/6XpOezB4f4OY.05l3j8DoRMjAqYVvIRFNsG2iA6TLm\",\"updated_at\":\"2021-07-01T15:28:40Z\"}}"], ["updated_at", "2021-07-01 15:28:40.349953"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 341ms (Views: 10.1ms | ActiveRecord: 5.4ms | Allocations: 24179)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:28:52 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (2.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$loYOrc4eKj1VnagPSelAqOVe2bMyc5gV4zZCHHsm017jKnyOrc.h6\",\"expiry\":1626362932,\"last_token\":\"$2a$10$tccZ3EW.AjviUBtqdR/VZunK1kJUZK2BmjiQIgK8GPoMZLjvG8CqG\",\"updated_at\":\"2021-07-01T15:28:52Z\"}}"], ["updated_at", "2021-07-01 15:28:52.837647"], ["id", 2]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 171ms (Views: 5.8ms | ActiveRecord: 8.6ms | Allocations: 6949)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:44:13 +0200
+Processing by PlantsController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (3.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$o6OPs0DOG4ZM6d53sCFfC.sBEwvPOs8ietQ.HxBm.sOms8S6UItqW\",\"expiry\":1626363853,\"last_token\":\"$2a$10$loYOrc4eKj1VnagPSelAqOVe2bMyc5gV4zZCHHsm017jKnyOrc.h6\",\"updated_at\":\"2021-07-01T15:44:13Z\"}}"], ["updated_at", "2021-07-01 15:44:13.764645"], ["id", 2]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 734ms (Views: 9.8ms | ActiveRecord: 12.9ms | Allocations: 7796)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:45:01 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$PRzlEGhMcs/tldfif.cnTuDUIhGLwlbVWecYT1XEwBk4JOCwC68aK\",\"expiry\":1626363901,\"last_token\":\"$2a$10$o6OPs0DOG4ZM6d53sCFfC.sBEwvPOs8ietQ.HxBm.sOms8S6UItqW\",\"updated_at\":\"2021-07-01T15:45:01Z\"}}"], ["updated_at", "2021-07-01 15:45:01.599123"], ["id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 386ms (Views: 6.7ms | ActiveRecord: 4.4ms | Allocations: 6949)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:45:06 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (4.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$RsrDVE7oUwZTJWM0KlVM2ud68aIXBpvnOX9zBHfzxjFXEeUd9AZ9e\",\"expiry\":1626363907,\"last_token\":\"$2a$10$PRzlEGhMcs/tldfif.cnTuDUIhGLwlbVWecYT1XEwBk4JOCwC68aK\",\"updated_at\":\"2021-07-01T15:45:07Z\"}}"], ["updated_at", "2021-07-01 15:45:07.512780"], ["id", 2]]
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 639ms (Views: 28.2ms | ActiveRecord: 18.7ms | Allocations: 9604)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:46:20 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$rkYfr5JBMi53IabLG7YIkukZByvdnnMZ5RzyP1.KmzRPqXf2OraRi\",\"expiry\":1626363981,\"last_token\":\"$2a$10$RsrDVE7oUwZTJWM0KlVM2ud68aIXBpvnOX9zBHfzxjFXEeUd9AZ9e\",\"updated_at\":\"2021-07-01T15:46:21Z\"}}"], ["updated_at", "2021-07-01 15:46:21.271927"], ["id", 2]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 358ms (Views: 6.4ms | ActiveRecord: 3.7ms | Allocations: 6926)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:48:21 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$uuMIuQWzhGSFTBMNPSw7oegSdBy9ypsSZUrQYZWlkTqUeHgfUrpbK\",\"expiry\":1626364102,\"last_token\":\"$2a$10$rkYfr5JBMi53IabLG7YIkukZByvdnnMZ5RzyP1.KmzRPqXf2OraRi\",\"updated_at\":\"2021-07-01T15:48:21Z\"}}"], ["updated_at", "2021-07-01 15:48:22.427235"], ["id", 2]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 789ms (Views: 23.5ms | ActiveRecord: 6.8ms | Allocations: 6949)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:48:35 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$s2qdiNaNSMnZiaW5v3.Bn.Pq6/N/rIXJ1z8LCcV4TJviyElm1jQ.O\",\"expiry\":1626364116,\"last_token\":\"$2a$10$uuMIuQWzhGSFTBMNPSw7oegSdBy9ypsSZUrQYZWlkTqUeHgfUrpbK\",\"updated_at\":\"2021-07-01T15:48:35Z\"}}"], ["updated_at", "2021-07-01 15:48:36.073058"], ["id", 2]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 320ms (Views: 6.0ms | ActiveRecord: 6.5ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:49:54 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$hyszo/ATzGKjZ4cPvWKrqe7tgnNhOWLZVNmDkhTtqBU3VJCySilp.\",\"expiry\":1626364194,\"last_token\":\"$2a$10$s2qdiNaNSMnZiaW5v3.Bn.Pq6/N/rIXJ1z8LCcV4TJviyElm1jQ.O\",\"updated_at\":\"2021-07-01T15:49:54Z\"}}"], ["updated_at", "2021-07-01 15:49:54.473857"], ["id", 2]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 422ms (Views: 14.1ms | ActiveRecord: 5.4ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:50:15 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 162ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 14875)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:50:15 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$72RXzJ8Ozjsh4b0w9XJjFOwrZrpqW.Q7x3IYiWLzy3KoRlUW67FQa\",\"expiry\":1626364215,\"last_token\":\"$2a$10$hyszo/ATzGKjZ4cPvWKrqe7tgnNhOWLZVNmDkhTtqBU3VJCySilp.\",\"updated_at\":\"2021-07-01T15:50:15Z\"}}"], ["updated_at", "2021-07-01 15:50:15.550075"], ["id", 2]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 217ms (Views: 2.6ms | ActiveRecord: 5.3ms | Allocations: 6925)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:51:32 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$S37/iDwgvkzE4gvdph2T4uyLTgj65wj/no8JQDzewG8YnYiHopuS2\",\"expiry\":1626364292,\"last_token\":\"$2a$10$72RXzJ8Ozjsh4b0w9XJjFOwrZrpqW.Q7x3IYiWLzy3KoRlUW67FQa\",\"updated_at\":\"2021-07-01T15:51:32Z\"}}"], ["updated_at", "2021-07-01 15:51:32.551158"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 199ms (Views: 3.6ms | ActiveRecord: 2.4ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:52:41 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$t/xEwiHI0DwF4YYVEPSurO8f.KPLAT0oUmJxzW4oJXka3TTMs49Qi\",\"expiry\":1626364361,\"last_token\":\"$2a$10$S37/iDwgvkzE4gvdph2T4uyLTgj65wj/no8JQDzewG8YnYiHopuS2\",\"updated_at\":\"2021-07-01T15:52:41Z\"}}"], ["updated_at", "2021-07-01 15:52:41.217518"], ["id", 2]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 201ms (Views: 3.0ms | ActiveRecord: 2.6ms | Allocations: 6923)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:54:06 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$jY.YDZ3erk57O3KjmPSF0u5G4QZkEXUN6S7SuU1tC5MXBuhXrEr4G\",\"expiry\":1626364447,\"last_token\":\"$2a$10$t/xEwiHI0DwF4YYVEPSurO8f.KPLAT0oUmJxzW4oJXka3TTMs49Qi\",\"updated_at\":\"2021-07-01T15:54:07Z\"}}"], ["updated_at", "2021-07-01 15:54:07.216642"], ["id", 2]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 227ms (Views: 2.5ms | ActiveRecord: 2.9ms | Allocations: 6923)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:54:09 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$jY.YDZ3erk57O3KjmPSF0u5G4QZkEXUN6S7SuU1tC5MXBuhXrEr4G\",\"expiry\":1626364447,\"last_token\":\"$2a$10$t/xEwiHI0DwF4YYVEPSurO8f.KPLAT0oUmJxzW4oJXka3TTMs49Qi\",\"updated_at\":\"2021-07-01T15:54:09Z\"}}"], ["updated_at", "2021-07-01 15:54:09.450019"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 114ms (Views: 3.8ms | ActiveRecord: 2.8ms | Allocations: 6839)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:56:10 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$Tp/ctJt4BEgXOyFA1sAaKuTYZ.NPevZeoCo3AS51jGxZB8Hm3hAI.\",\"expiry\":1626364570,\"last_token\":\"$2a$10$jY.YDZ3erk57O3KjmPSF0u5G4QZkEXUN6S7SuU1tC5MXBuhXrEr4G\",\"updated_at\":\"2021-07-01T15:56:10Z\"}}"], ["updated_at", "2021-07-01 15:56:10.557626"], ["id", 2]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 135ms (Views: 3.9ms | ActiveRecord: 6.2ms | Allocations: 6899)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:59:36 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$9kBOOIF6oOOiVJwqs8jV4unbiQn5AdD7npXJfs1aFquD1x8SGOb42\",\"expiry\":1626364777,\"last_token\":\"$2a$10$Tp/ctJt4BEgXOyFA1sAaKuTYZ.NPevZeoCo3AS51jGxZB8Hm3hAI.\",\"updated_at\":\"2021-07-01T15:59:37Z\"}}"], ["updated_at", "2021-07-01 15:59:37.123423"], ["id", 2]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 235ms (Views: 4.1ms | ActiveRecord: 5.1ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:59:56 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$jHGETobvNdZ3zkouorDFGeXzzGb.1UX1zvsB9z4kbDx3MjtzDfII2\",\"expiry\":1626364796,\"last_token\":\"$2a$10$9kBOOIF6oOOiVJwqs8jV4unbiQn5AdD7npXJfs1aFquD1x8SGOb42\",\"updated_at\":\"2021-07-01T15:59:56Z\"}}"], ["updated_at", "2021-07-01 15:59:56.538500"], ["id", 2]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 235ms (Views: 5.0ms | ActiveRecord: 4.0ms | Allocations: 6925)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 17:59:57 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$jHGETobvNdZ3zkouorDFGeXzzGb.1UX1zvsB9z4kbDx3MjtzDfII2\",\"expiry\":1626364796,\"last_token\":\"$2a$10$9kBOOIF6oOOiVJwqs8jV4unbiQn5AdD7npXJfs1aFquD1x8SGOb42\",\"updated_at\":\"2021-07-01T15:59:58Z\"}}"], ["updated_at", "2021-07-01 15:59:58.019272"], ["id", 2]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 123ms (Views: 3.0ms | ActiveRecord: 2.6ms | Allocations: 6839)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:01:48 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$EotEze3HokYw7cdxeJgnY.Sq5d0RGs0/Qhx3h2bWewcT1BwgRr/TC\",\"expiry\":1626364908,\"last_token\":\"$2a$10$jHGETobvNdZ3zkouorDFGeXzzGb.1UX1zvsB9z4kbDx3MjtzDfII2\",\"updated_at\":\"2021-07-01T16:01:48Z\"}}"], ["updated_at", "2021-07-01 16:01:48.440162"], ["id", 2]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 170ms (Views: 3.3ms | ActiveRecord: 4.1ms | Allocations: 6900)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:48:53 +0200
+Processing by PlantsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$0dPjIuZLNckzULMzQQkQ4ecp0MLPk3.OVpwixJqT5OdEcT.d2CFpq\",\"expiry\":1626367733,\"last_token\":\"$2a$10$EotEze3HokYw7cdxeJgnY.Sq5d0RGs0/Qhx3h2bWewcT1BwgRr/TC\",\"updated_at\":\"2021-07-01T16:48:53Z\"}}"], ["updated_at", "2021-07-01 16:48:53.201251"], ["id", 2]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 122ms (Views: 1.7ms | ActiveRecord: 3.8ms | Allocations: 7767)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:49:13 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$vXuXh12nf2Td.zp2iUTpg.NRaCpRC0xpkrCftTnjaEWTtlS/KX.OW\",\"expiry\":1626367753,\"last_token\":\"$2a$10$0dPjIuZLNckzULMzQQkQ4ecp0MLPk3.OVpwixJqT5OdEcT.d2CFpq\",\"updated_at\":\"2021-07-01T16:49:13Z\"}}"], ["updated_at", "2021-07-01 16:49:13.795773"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 108ms (Views: 1.5ms | ActiveRecord: 1.6ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:50:02 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$O2Ba/GJXIToq4LhXgUcZUuDdI.hrPbf/q0ADXIwL3ErRalTDZBkRy\",\"expiry\":1626367802,\"last_token\":\"$2a$10$vXuXh12nf2Td.zp2iUTpg.NRaCpRC0xpkrCftTnjaEWTtlS/KX.OW\",\"updated_at\":\"2021-07-01T16:50:02Z\"}}"], ["updated_at", "2021-07-01 16:50:02.786213"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 168ms (Views: 1.9ms | ActiveRecord: 2.0ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:51:21 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$DNpvNOV.3tzUlvDn2D6..erZe5wLwCgPVvQApf/PL.BcPeOuJ5nMi\",\"expiry\":1626367881,\"last_token\":\"$2a$10$O2Ba/GJXIToq4LhXgUcZUuDdI.hrPbf/q0ADXIwL3ErRalTDZBkRy\",\"updated_at\":\"2021-07-01T16:51:21Z\"}}"], ["updated_at", "2021-07-01 16:51:21.884534"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 140ms (Views: 3.6ms | ActiveRecord: 1.8ms | Allocations: 6927)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:52:02 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$134FC0FfGrpX6azNPG5yQ.PFQnKizibA1XZ1MnPoZY6Gds1ZtCQme\",\"expiry\":1626367923,\"last_token\":\"$2a$10$DNpvNOV.3tzUlvDn2D6..erZe5wLwCgPVvQApf/PL.BcPeOuJ5nMi\",\"updated_at\":\"2021-07-01T16:52:03Z\"}}"], ["updated_at", "2021-07-01 16:52:03.097755"], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 152ms (Views: 2.5ms | ActiveRecord: 2.1ms | Allocations: 6923)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:52:11 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$MplwUvPK9jS5n35MDwFdWug.DtN2WnszMw/hT7cQdaGKj37aM8f5C\",\"expiry\":1626367931,\"last_token\":\"$2a$10$134FC0FfGrpX6azNPG5yQ.PFQnKizibA1XZ1MnPoZY6Gds1ZtCQme\",\"updated_at\":\"2021-07-01T16:52:11Z\"}}"], ["updated_at", "2021-07-01 16:52:11.257056"], ["id", 2]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 167ms (Views: 2.3ms | ActiveRecord: 2.4ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-01 18:55:18 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$UwA9ja6pzfqIYVrrROmotOXgXz672vv0O2PdB9aZ9hxzAI9uZTkHy\",\"expiry\":1626368118,\"last_token\":\"$2a$10$MplwUvPK9jS5n35MDwFdWug.DtN2WnszMw/hT7cQdaGKj37aM8f5C\",\"updated_at\":\"2021-07-01T16:55:18Z\"}}"], ["updated_at", "2021-07-01 16:55:18.985615"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 112ms (Views: 1.8ms | ActiveRecord: 1.7ms | Allocations: 6922)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-02 10:37:21 +0200
+Processing by PlantsController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (1.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$r.iIVPla9MTr50Obm5G5DeZ7Y4GOuUbjzM4edrnSDP.FQUpt.sRt6\",\"expiry\":1626424641,\"last_token\":\"$2a$10$UwA9ja6pzfqIYVrrROmotOXgXz672vv0O2PdB9aZ9hxzAI9uZTkHy\",\"updated_at\":\"2021-07-02T08:37:21Z\"}}"], ["updated_at", "2021-07-02 08:37:21.349639"], ["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 170ms (Views: 5.9ms | ActiveRecord: 5.8ms | Allocations: 7767)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-02 10:37:49 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$zPNF9wCMKaW8DGsX9UpLVOyOl3EOdY5RuApSp65eulf6jLeMpk0A2\",\"expiry\":1626424669,\"last_token\":\"$2a$10$r.iIVPla9MTr50Obm5G5DeZ7Y4GOuUbjzM4edrnSDP.FQUpt.sRt6\",\"updated_at\":\"2021-07-02T08:37:49Z\"}}"], ["updated_at", "2021-07-02 08:37:49.668615"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 131ms (Views: 2.5ms | ActiveRecord: 2.1ms | Allocations: 6923)
+
+
+Started GET "/plants" for 127.0.0.1 at 2021-07-02 10:37:58 +0200
+Processing by PlantsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "joschka.schulz@gmx.de"], ["LIMIT", 1]]
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:9:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ? [0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["tokens", "{\"wIIKZSfx4daVAizotyButg\":{\"token\":\"$2a$10$EcLprvpnW65A.ch.E36oCeV2AZAPWtEwXpNO5TqkiXs2Dac62.fMq\",\"expiry\":1626360384,\"last_token\":\"$2a$10$RCmHN6E2EVQXRLxl3w9e1e3RlOiOwHgWzYCv7mEliwNKnWiDJKIuW\",\"updated_at\":\"2021-07-01T14:46:24Z\"},\"2mZ0mHN6-P6k5rMRYDgqJA\":{\"token\":\"$2a$10$cFCK0Xpaati/crBfrqjxW.AZFfEfOoQPjuEmD4dBcrv7quDPqE7WW\",\"expiry\":1626360491,\"last_token\":\"$2a$10$SB.zQn7dVGT5Xh2h5t9/1OxwB4pFYtULdjnlyfcaDIY/QLfRMom7O\",\"updated_at\":\"2021-07-01T14:48:10Z\"},\"vvzrTtjp-Q__f7TmAzxYaQ\":{\"token\":\"$2a$10$50UncQF6fKt5s11TnZJ6yO.puuMVjJSIKYVFYA.EpfWH/PV66dHQm\",\"expiry\":1626360575,\"last_token\":\"$2a$10$kctjuwuQIE1cPTwRrb48keFzjyndfKo9t9jFwPOReZLISFY.eW5SO\",\"updated_at\":\"2021-07-01T14:49:35Z\"},\"FOUAPUNp2zQYcKjzInfKAg\":{\"token\":\"$2a$10$uiEynqxg5uwaFJJiThMXMOeNr.5zPPi/yNiSWzvablYxVafvLZ6SG\",\"expiry\":1626360600,\"last_token\":\"$2a$10$MOmSzijvXpdGdkSchI38eOL8WyqvQiiBh9VvSbNrbN4wUo/uLGoyC\",\"updated_at\":\"2021-07-01T14:50:00Z\"},\"fJeZyVdUVVN6yE94UYFUDg\":{\"token\":\"$2a$10$xbdYTHcqKIhQmU14XK8Eye.h5cPwSD6FqfrI24IwRpz0iMa5Uu7da\",\"expiry\":1626360732,\"last_token\":\"$2a$10$l9.um1yCm95ubc63FiaxBOnf0ZpsGJ9a/bdXMrNNiJThaUQ9LmndW\",\"updated_at\":\"2021-07-01T14:52:12Z\"},\"_WPw2Gga0I5HnV9It3eI-g\":{\"token\":\"$2a$10$RJgrsMksQ/fcmMF/A2mab.yAQjCjmaphqcDgdxbxdDcs64lhmLS0i\",\"expiry\":1626424678,\"last_token\":\"$2a$10$zPNF9wCMKaW8DGsX9UpLVOyOl3EOdY5RuApSp65eulf6jLeMpk0A2\",\"updated_at\":\"2021-07-02T08:37:58Z\"}}"], ["updated_at", "2021-07-02 08:37:58.330669"], ["id", 2]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 116ms (Views: 2.0ms | ActiveRecord: 2.1ms | Allocations: 6924)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210701123336)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210630112457),
+(20210701092022);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-05 09:00:44.248761"], ["updated_at", "2021-07-05 09:00:44.248761"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7a193e63ba741d58af69d67f99dfb87aa452f7a3"], ["created_at", "2021-07-05 09:00:44.262805"], ["updated_at", "2021-07-05 09:00:44.262805"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210701123336)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210630112457),
+(20210701092022);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-05 09:00:44.298162"], ["updated_at", "2021-07-05 09:00:44.298162"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-07-05 09:00:44.303067"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7a193e63ba741d58af69d67f99dfb87aa452f7a3"], ["created_at", "2021-07-05 09:00:44.308545"], ["updated_at", "2021-07-05 09:00:44.308545"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2021-07-05 09:01:03.864723"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-07-05 09:01:03.871831"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "admin@toolcase.tech"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210701123336)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210630112457),
+(20210701092022);
+
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-05 09:01:14.053913"], ["updated_at", "2021-07-05 09:01:14.053913"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7a193e63ba741d58af69d67f99dfb87aa452f7a3"], ["created_at", "2021-07-05 09:01:14.061479"], ["updated_at", "2021-07-05 09:01:14.061479"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210701123336)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210630112457),
+(20210701092022);
+
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-05 09:01:14.099559"], ["updated_at", "2021-07-05 09:01:14.099559"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-07-05 09:01:14.105367"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7a193e63ba741d58af69d67f99dfb87aa452f7a3"], ["created_at", "2021-07-05 09:01:14.111509"], ["updated_at", "2021-07-05 09:01:14.111509"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "admin@toolcase.tech"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210701123336)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210630112457),
+(20210701092022);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-05 09:03:11.925336"], ["updated_at", "2021-07-05 09:03:11.925336"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7a193e63ba741d58af69d67f99dfb87aa452f7a3"], ["created_at", "2021-07-05 09:03:11.938993"], ["updated_at", "2021-07-05 09:03:11.938993"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "leave_damages"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "leave_damages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "wetBrown" boolean, "dryBrown" boolean, "yellow" boolean, "losingLeaves" boolean, "parasites" varchar, "plant_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE INDEX "index_leave_damages_on_plant_id" ON "leave_damages" ("plant_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "watering" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar DEFAULT 'email' NOT NULL, "uid" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "allow_password_change" boolean DEFAULT 0, "remember_created_at" datetime, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "name" varchar, "nickname" varchar, "image" varchar, "email" varchar, "tokens" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_uid_and_provider" ON "users" ("uid", "provider")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20210701123336)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20210630112457),
+(20210701092022);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-05 09:03:11.973730"], ["updated_at", "2021-07-05 09:03:11.973730"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2021-07-05 09:03:11.979454"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "7a193e63ba741d58af69d67f99dfb87aa452f7a3"], ["created_at", "2021-07-05 09:03:11.986123"], ["updated_at", "2021-07-05 09:03:11.986123"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND "users"."provider" = ? LIMIT ?[0m  [["email", "admin@toolcase.tech"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["uid", "admin@toolcase.tech"], ["encrypted_password", "$2a$12$WpH.y6xJl25BS8uYmBd6D.xn4zGxUgryts/S8ca87ufaCC5ijMNmO"], ["email", "admin@toolcase.tech"], ["created_at", "2021-07-05 09:03:12.302318"], ["updated_at", "2021-07-05 09:03:12.302318"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
