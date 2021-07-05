@@ -5,7 +5,7 @@
       <v-col cols="4">
         <h1>Sign In</h1>
         <v-text-field label="email" v-model="email" />
-        <v-text-field label="password" v-model="password" />
+        <v-text-field label="password" type="password" v-model="password" />
         <v-btn @click="signin">Einloggen</v-btn>
       </v-col>
       <v-col cols="4"/>
