@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Plant from "@/views/Plant";
-import LeaveDamage from "@/views/LeaveDamage";
+import LeafDamage from "@/views/LeafDamage";
 import SignIn from "@/views/SignIn";
 
 Vue.use(VueRouter)
@@ -19,9 +19,9 @@ const routes = [
     component: Plant,
   },
   {
-    path: '/leaveDamage',
-    name: 'LeaveDamage',
-    component: LeaveDamage,
+    path: '/leafDamage',
+    name: 'LeafDamage',
+    component: LeafDamage,
   },
   {
     path: '/signin',
